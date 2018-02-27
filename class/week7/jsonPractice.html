@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <style media="screen">
+    @import url('https://fonts.googleapis.com/css?family=Cinzel:900');
+    @import url('https://fonts.googleapis.com/css?family=Nunito');
+    @import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+      body{
+        background-image: url(pattern.png);
+        background-repeat: repeat;
+      }
+      h1{
+        font-family: "Cinzel", serif;
+      }
+      h2{
+        font-family: "Dancing Script", cursive;
+      }
+      ul li{
+        list-style: none;
+        font-size: 24px;
+        font-family: 'Nunito', sans-serif;
+        text-decoration: none;
+        color: #0D004C;
+      }
+      .height1{
+        height: 100px;
+      }
+      .height2{
+        height: 50px;
+      }
+      .height3{
+        height: 650px;
+      }
+      .flexSpaceAround{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .flexVertSpaceAround{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        line-height: 30px;
+      }
+
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 flexSpaceAround height1 color1">
+          <h1>Must-See Movies</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 height2">
+          <ul class="flexVertSpaceAround">
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">Top 5</a>
+            </li>
+            <li>
+              <a href="#">About</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8 output">
+
+        </div>
+        <div class="col-md-4 height3 flexSpaceAround">
+          <img src="camera.jpg" alt="Camera">
+        </div>
+      </div>
+        <div class="row">
+          <div class="col-md-12 color1 flexSpaceAround">
+            <h2>That's all folks!</h2>
+          </div>
+        </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        //This function gets a random color between 0 and 255
+        function getRandomColor() {
+          return Math.floor(Math.random() * 255);
+        }
+        //get all the elements (divs) with the class .randomColor
+        var randomColor = $(".randomColor");
+
+        //Loop through all elements
+        //for each element change the css background colour to RGB + three random colours
+        $.each(randomColor, function(index, item) {
+          $(this).css("background-color", "RGB(" + getRandomColor() + "," + getRandomColor() + "," + getRandomColor() + ")");
+        })
+
+      })
+    </script>
+    <script>
+      var movies = [{
+        "imgUrl": "cover0.jpg",
+        "name": "The Notebook",
+        "genre": "Romance",
+        "lengthHours": 2
+      },
+
+      {
+        "imgUrl": "cover1.jpg",
+        "name": "Inception",
+        "genre": "Thriller",
+        "lengthHours": 2.5
+      },
+
+      {
+        "imgUrl": "cover2.jpg",
+        "name": "It",
+        "genre": "Horror",
+        "lengthHours": 2.25
+      },
+
+      {
+        "imgUrl": "cover3.jpg",
+        "name": "Madagascar",
+        "genre": "Animated",
+        "lengthHours": 1.5
+      },
+
+      {
+        "imgUrl": "cover4.jpg",
+        "name": "Kingsman",
+        "genre": "Comedy",
+        "lengthHours": 2.33
+      }
+    ];
+
+      $(document).ready(function() {
+        // $(".output").html("test output");
+        var html = "<table class='table table-striped table-hover'>" +
+          "<tr>" +
+            "<th>picture</th>" +
+            "<th>name</th>" +
+            "<th>genre</th>" +
+            "<th>length in hours</th>" +
+          "</tr>";
+
+          //here is the Loop of the array 'cats'
+          for (var i = 0; i < movies.length; i++) {
+            console.log("i " + i);
+            html += "<tr>" +
+                "<td><img src='" + movies[i].imgUrl + "'/></td>" +
+                "<td>" + movies[i].name + "</td>" +
+                "<td>" + movies[i].genre + "</td>" +
+                "<td>" + movies[i].lengthHours + "</td>" +
+              "</tr>";
+          }
+          //{} = execute code
+          //length of cats
+
+          html += "</table>";
+          $(".output").html(html);
+          //put it in a thing called "output"
+        });
+    </script>
+  </body>
+</html>
