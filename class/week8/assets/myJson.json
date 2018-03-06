@@ -1,0 +1,48 @@
+[
+  {
+    "class":"item active",
+    "course":"Web Design",
+    "courseCode":"MDST 3350",
+    "program":"Media Studies",
+    "classroom":"GH 301",
+    "professor":"David Rock",
+    "time":"4pm"
+  },
+  {
+    "class":"item",
+    "course":"Digital Design",
+    "courseCode":"MDST 2030",
+    "program":"Media Studies",
+    "classroom":"GH 323",
+    "professor":"Rachel Williamson",
+    "time":"10am"
+  },
+  {
+    "class":"item",
+    "course":"Production Design",
+    "courseCode":"MDST 5060",
+    "program":"Media Studies",
+    "classroom":"GH 320",
+    "professor":"Richard Smith",
+    "time":"8am"
+  },
+  {
+    "class":"item",
+    "course":"Research Methods",
+    "courseCode":"SCMA 3010",
+    "program":"Media Studies",
+    "classroom":"GH 321",
+    "professor":"Martin Fererra",
+    "time":"3pm"
+  },
+  {
+    "class":"item",
+    "course":"Videography",
+    "courseCode":"MSDT 3050",
+    "program":"Media Studies",
+    "classroom":"GH 412",
+    "professor":"Elena Carson",
+    "time":""
+  }
+
+]
