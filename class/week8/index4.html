@@ -34,7 +34,7 @@
   <script>
 
   //get the JSON
-  var url="";
+  var url="https://raw.githubusercontent.com/asukalap/asukalap.github.io/master/class/week8/assets/myJson.json";
   //info that comes back into this URL, we put into a function called 'data'
   $.getJSON(url).done(function(data){
     console.log("success! ");
@@ -43,8 +43,35 @@
     // initialize to an empty string
     var dataHtml="";
     for(var i=0;i<data.length;i++){
-      dataHtml+="<div>"+data[i].title+"</div>";
+      dataHtml+="<div>"+data[i].class+"</div>";
+      dataHtml+="<div>"+data[i].course+"</div>";
+      dataHtml+="<div>"+data[i].courseCode+"</div>";
+      dataHtml+="<div>"+data[i].program+"</div>";
+      dataHtml+="<div>"+data[i].classroom+"</div>";
+      dataHtml+="<div>"+data[i].professor+"</div>";
+      dataHtml+="<div>"+data[i].time+"</div>";
     }
+
+    var dataHtml = "<table class='table table-striped table-hover'>" +
+          "<tr>"+
+          "<th>Class</th>"+
+          "<th>Course</th>"+
+          "<th>Course Code</th>"+
+          "<th>Program</th>"+
+          "<th>Professor</th>"+
+          "<th>Time</th>"+
+          "</tr>";
+          for (var i = 0; i < data.length; i++) {
+            dataHtml +=
+                "<tr>"+
+                "<td>"+data[i].class+"</td>"+
+                "<td>"+data[i].course+"</td>"+
+                "<td>"+data[i].courseCode+"</td>"+
+                "<td>"+data[i].program+"</td>"+
+                "<td>"+data[i].classroom+"</td>"+
+                "<td>"+data[i].time+"</td>"+
+                "</tr>";
+          }
 
     $(document).ready(function(){
       $(".output").html(dataHtml)
