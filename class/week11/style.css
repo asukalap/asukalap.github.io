@@ -82,6 +82,7 @@ select{
 .imageContainer{
   background-color: #333;
   width: 200px;
+  height: 200px;
   overflow: hidden;
 }
 .marAndTitle{
@@ -130,4 +131,11 @@ select{
   padding-top: 16px;
   padding-bottom: 16px;
   border:1px solid #333;
+}
+
+.asuLapTitle{
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #3B61BD;
 }
