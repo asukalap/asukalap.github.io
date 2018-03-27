@@ -6,6 +6,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cards Website Template</title>
   <style media="screen">
+  @import url('https://fonts.googleapis.com/css?family=Poppins:400,700');
+  @import url('https://fonts.googleapis.com/css?family=Handlee');
+  body{
+    background-image: url(img/background.jpg);
+  }
+    .flexSpaceAround{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    header{
+      font-family: 'Handlee', cursive;
+      font-size: 40px;
+      font-weight: 700;
+      padding: 1em;
+      color: #BD576A;
+      background-color: white;
+    }
+
     .outputArray {
       display: flex;
       justify-content: space-around;
@@ -19,11 +39,18 @@
 
     .cardInfo {
       text-align: center;
+      font-family: 'Poppins', sans-serif;
     }
 
     .itemButton{
       text-align: right;
       padding: 10px;
+    }
+
+    .nameLabel{
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 24px;
     }
   </style>
 
@@ -41,6 +68,13 @@
 
 <body>
   <div class="container">
+    <div class="row">
+      <div class="col-md-12 flexSpaceAround">
+        <header>
+          Furry Friends Club
+        </header>
+      </div>
+    </div>
     <div class="row">
       <div class="col-md-12 cardSection">
       </div>
@@ -66,7 +100,7 @@
           "breed": "Westie",
         //  "imgUrl": "http://via.placeholder.com/300x300",
           "size":"Small",
-          "button": "More Info" //if u wish to do buttons
+          // "button": "More Info" //if u wish to do buttons
         },
 
         {
@@ -76,7 +110,7 @@
           "breed": "Corgi",
         //  "imgUrl": "http://via.placeholder.com/300x300",
           "size": "Small",
-          "button": "More Info" //if u wish to do buttons
+          // "button": "More Info" //if u wish to do buttons
         },
 
         {
@@ -86,7 +120,7 @@
           "breed": "Jack Russell",
         //  "imgUrl": "http://via.placeholder.com/300x300",
           "size":"Small",
-          "button": "More Info" //if u wish to do buttons
+          // "button": "More Info" //if u wish to do buttons
         },
 
         {
@@ -96,7 +130,7 @@
           "breed": "Husky",
         //  "imgUrl": "http://via.placeholder.com/300x300",
           "size":"Large",
-          "button": "More Info" //if u wish to do buttons
+          // "button": "More Info" //if u wish to do buttons
         },
 
         {
@@ -106,7 +140,7 @@
           "breed": "Shiba Inu",
         //  "imgUrl": "http://via.placeholder.com/300x300",
           "size":"Medium",
-          "button": "More Info" //if u wish to do buttons
+          // "button": "More Info" //if u wish to do buttons
         }
       ];
 
@@ -124,13 +158,12 @@
 
         for (var i = 0; i < arrayDogs.length; i++) { //change arrayTopic to whatever you
           html += "<div class='panel panel-default individualCard'>" +
-          //  "<div><img class='img-responsive' src='" + arrayTopic[i].imgUrl + "' /></div>" + //change the red text to the keys in your Array
-            "<div class='cardInfo imgLabel'>" + arrayDogs[i].img + "</div>" + //change the red text to the keys in your Array
+            "<div><img class='img-responsive' src='" + arrayDogs[i].imgUrl + "' /></div>" + //change the red text to the keys in your Array
             "<div class='cardInfo nameLabel'>" + arrayDogs[i].name + "</div>" + //change the red text to the keys in your Array
             "<div class='cardInfo ageLabel'>" + arrayDogs[i].age + "</div>" + //change the red text to the keys in your Array
             "<div class='cardInfo breedLabel'>" + arrayDogs[i].breed + "</div>" + //change the red text to the keys in your Array
             "<div class='cardInfo sizeLabel'>" + arrayDogs[i].size + "</div>" + //change the red text to the keys in your Array
-            "<div class='itemButton'><button type='button' class='btn btn-default'>" + arrayTopic[i].button + "</button></div>" + //Button Template
+            // "<div class='itemButton'><button type='button' class='btn btn-default'>" + arrayDogs[i].button + "</button></div>" + //Button Template
             "</div>";
         }
         $(".outputArray").html(html); //outputs the loop onto the html
