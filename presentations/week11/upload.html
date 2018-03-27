@@ -1,4 +1,4 @@
-breed<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -60,52 +60,52 @@ breed<!DOCTYPE html>
 
       //These are your Object Arrays
       var arrayDogs = [{ //Change arrayTopic to whatever topic your group chose in class
-          "image":"",
-          "name": "Colby",
+          "imgUrl":"https://asukalap.github.io/presentations/week11/img/westie.jpg",
+          "name": "Supu",
           "age": 5,
           "breed": "Westie",
         //  "imgUrl": "http://via.placeholder.com/300x300",
-          "size":"Small"
+          "size":"Small",
           "button": "More Info" //if u wish to do buttons
         },
 
         {
-          "image":"",
+          "imgUrl":"https://asukalap.github.io/presentations/week11/img/Pembroke Welsh Corgi 3.jpg",
           "name": "Spud",
           "age": 13,
           "breed": "Corgi",
         //  "imgUrl": "http://via.placeholder.com/300x300",
-          "size":"Small"
+          "size":"Small",
           "button": "More Info" //if u wish to do buttons
         },
 
         {
-          "image":"",
+          "imgUrl":"https://asukalap.github.io/presentations/week11/img/thumbs_4-puppy.jpg",
           "name": "Ezma",
           "age": 2,
           "breed": "Jack Russell",
         //  "imgUrl": "http://via.placeholder.com/300x300",
-          "size":"Small"
+          "size":"Small",
           "button": "More Info" //if u wish to do buttons
         },
 
         {
-          "image":"",
+          "imgUrl":"https://asukalap.github.io/presentations/week11/img/download.jpeg",
           "name": "Scooter",
           "age": 7,
           "breed": "Husky",
         //  "imgUrl": "http://via.placeholder.com/300x300",
-          "size":"Large"
+          "size":"Large",
           "button": "More Info" //if u wish to do buttons
         },
 
         {
-          "image":"",
+          "imgUrl":"https://asukalap.github.io/presentations/week11/img/200px-Shiba_Inu.jpg",
           "name": "Princess",
           "age": 8,
           "breed": "Shiba Inu",
         //  "imgUrl": "http://via.placeholder.com/300x300",
-          "size":"Medium"
+          "size":"Medium",
           "button": "More Info" //if u wish to do buttons
         }
       ];
@@ -118,17 +118,18 @@ breed<!DOCTYPE html>
 
 /*      Remember that each card needs the following things:
         - Gets the user do something such as redirecting to another page (this can be done with buttons, animations, etc.)
-        - Include and style the image
+        - Include and style the imgUrl
         - Be organized in a specific way (HINT: Flexbox)
  */
 
-        for (var i = 0; i < arrayTopic.length; i++) { //change arrayTopic to whatever you
+        for (var i = 0; i < arrayDogs.length; i++) { //change arrayTopic to whatever you
           html += "<div class='panel panel-default individualCard'>" +
           //  "<div><img class='img-responsive' src='" + arrayTopic[i].imgUrl + "' /></div>" + //change the red text to the keys in your Array
+            "<div class='cardInfo imgLabel'>" + arrayDogs[i].img + "</div>" + //change the red text to the keys in your Array
             "<div class='cardInfo nameLabel'>" + arrayDogs[i].name + "</div>" + //change the red text to the keys in your Array
             "<div class='cardInfo ageLabel'>" + arrayDogs[i].age + "</div>" + //change the red text to the keys in your Array
-            "<div class='cardInfo ownerLabel'>" + arrayDogs[i].breed + "</div>" + //change the red text to the keys in your Array
-            "<div class='cardInfo ownerLabel'>" + arrayDogs[i].size + "</div>" + //change the red text to the keys in your Array
+            "<div class='cardInfo breedLabel'>" + arrayDogs[i].breed + "</div>" + //change the red text to the keys in your Array
+            "<div class='cardInfo sizeLabel'>" + arrayDogs[i].size + "</div>" + //change the red text to the keys in your Array
             "<div class='itemButton'><button type='button' class='btn btn-default'>" + arrayTopic[i].button + "</button></div>" + //Button Template
             "</div>";
         }
@@ -153,13 +154,13 @@ breed<!DOCTYPE html>
       //
       //     /*Remember that each card needs the following things:
       //         - Gets the user do something such as redirecting to another page (this can be done with buttons, animations, etc.)
-      //         - Include an image
+      //         - Include an imgUrl
       //         - Be organized in a specific way (HINT: JSON)
       //     */
       //
       //     //Here is the loop of the Array you made
       //     for (var i = 0; i < d.length; i++) {
-      //       html += "<div>" + d[i].name + "</div>"; //Image
+      //       html += "<div>" + d[i].name + "</div>"; //imgUrl
       //       html += "<div>" + d[i].texture + "</div>"; // Item 1
       //       html += "<div>" + d[i].temperature + "</div>"; // Item 2
       //       html += "<div>" + d[i].origin + "</div>"; // Item 3
