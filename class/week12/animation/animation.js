@@ -114,7 +114,7 @@ function destroyAnimation(animation) {
 //create a sprite
 function spawnAnimation() {
 
-  var spriteIndex = Math.floor(Math.random() * spriteImages.length + 1) - 1; //get a random index from spriteImages
+  var spriteIndex = Math.floor(Math.random() * spriteImages.length ); //get a random index from spriteImages
   var animationImg = new Image(); //make an image object
   animationImg.src = spriteImages[spriteIndex].spriteMapUrl; //get a random sprite sheet
   var scaleRatio = Math.random() * 0.5 + 0.5; //get a random scale
@@ -138,6 +138,8 @@ canvas.width = screen.availWidth;
 canvas.height = screen.availHeight;
 //a bunch of sprite data
 var spriteImages = [{
+    //10 frame sprite parameters
+    //bring it into photoshop, transparent background with a smaller one inside, however many frames, you duplicate the png
     "spriteMapUrl": "images/coin-sprite-animation.png",
     "numFrames": 10,
     "width": 1000,
@@ -157,6 +159,13 @@ var spriteImages = [{
     "width": 4800,
     "height": 200,
     "name": "cat"
+  },
+  {
+    "spriteMapUrl":"images/heartbeat.png",
+    "numFrames": 10,
+    "width": 1000,
+    "height": 100,
+    "name": "heartbeat"
   }
 ];
 var animations = []; //an array to hold the currently existing sprite obects
