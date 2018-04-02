@@ -100,6 +100,11 @@ select{
   text-align: center;
     padding: 10px;
 }
+.confirmationMessage{
+  font-weight: bold;
+  text-align: center;
+  font-size: 22px;
+}
 /*mark 2*/
 @import url(https://fonts.googleapis.com/css?family=Arvo:700);
 .proAndTitle {
